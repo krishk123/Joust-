@@ -10,9 +10,9 @@
   <h3>Milestone #1: November 20th, 2015 </h3>
   <strong>Goal:</strong> You should have solid planning done by the end of this milestone.
   <ul>
-    <li>first task : Have a small prototype on Processing ready by Friday.-Krish</li>
-    <li>second task: Make sure the interactions work with makey makey.</li>
-    <li>third task: Make sure balance and other functions of the platform works.</li>
+    <li>First task : Have a small prototype on Processing ready by Friday.-Krish</li>
+    <li>Second task: Make sure the interactions work with makey makey.</li>
+    <li>Third task: Make sure balance and other functions of the platform works.</li>
   </ul>
 </div>
 
@@ -20,7 +20,9 @@
   <h3>Milestone #2: November 30th, 2015 </h3>
   <strong>Goal:</strong> You should have a small prototype by the end of this milestone.
   <ul>
-    <li>first task : who is doing it (if in team)</li>
+    <li>First task : Make sure interaction between the platform and the triangle on 	the bottom works using Box2d </li>
+    <li>Second task : Get fighters to balance on each of the platforms </li>
+    <li>Third task : Make the buttons work so that if button pressed, the platforms        	tilt in certain directions. </li>
   </ul>
 </p>
 
@@ -29,6 +31,7 @@
   Milestone #3: December 8th, 2015 (For G block) </h3>
   <strong>Goal:</strong> You should have iterated and improved on your prototype by the end of this milestone.
   <ul>
-    <li>first task : who is doing it (if in team)</li>
+    <li>First task: Incorporate makey makey for the tilting of the platform.</li>
+    <li>Second task: Final testing of prototype.</li> 
   </ul>
 </div>
