@@ -45,4 +45,5 @@ class Platform
     rect(0,0,w,h);
     popMatrix();
   }
+  
 }
