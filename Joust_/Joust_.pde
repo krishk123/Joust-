@@ -12,7 +12,7 @@ void setup()
   background(0); 
   box2d = new Box2DProcessing(this); 
   box2d.createWorld();
-  platform = new Platform((width/2)-400, (height/2), 180, 60 );
+  platform = new Platform(100, 0 , 300, 30 );
   
 }
 

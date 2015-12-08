@@ -12,24 +12,37 @@ class Platform
     y = y_;
     w = w_;
     h = h_; 
+    
     BodyDef bd = new BodyDef();
     bd.type = BodyType.DYNAMIC;
     bd.position.set(box2d.coordPixelsToWorld(x,y)); 
+    
     body = box2d.createBody(bd);
+    
     PolygonShape ps = new PolygonShape(); 
     float box2Dw = box2d.scalarPixelsToWorld(w/2);
     float box2Dh = box2d.scalarPixelsToWorld(h/2);
     ps.setAsBox(box2Dw, box2Dh); 
+    
     FixtureDef fd = new FixtureDef(); 
     fd.shape = ps;
     fd.density = 1; 
     fd. friction = 0.3;
     fd.restitution = 0.5; 
+    body.createFixture(fd);
   }
   
   void display()
   {
+    Vec2 pos = box2d.getBodyPixelCoord(body);
+    pushMatrix();
+    translate(pos.x, pos.y);
+    fill(127);
+    stroke(0);
+    strokeWeight(2);
+    rectMode(CENTER);
     rect(x, y, w, h);
+    popMatrix();
   }
   
 }
