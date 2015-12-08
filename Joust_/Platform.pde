@@ -34,15 +34,17 @@ class Platform
   
   void display()
   {
-    Vec2 pos = box2d.getBodyPixelCoord(body);
     pushMatrix();
+    float a = body.getAngle();
+    Vec2 pos = box2d.getBodyPixelCoord(body);
     translate(pos.x, pos.y);
+    rotate(-a);
     fill(127);
     stroke(0);
-    strokeWeight(2);
     rectMode(CENTER);
     rect(x, y, w, h);
     popMatrix();
+
   }
   
 }
