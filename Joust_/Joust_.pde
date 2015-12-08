@@ -3,34 +3,56 @@ import org.jbox2d.collision.shapes.*;
 import org.jbox2d.common.*;
 import org.jbox2d.dynamics.*; 
 
-Platform platform;  
-Platform platform2;
-Balance balance2;
-Boundary boundary;
-Balance balance;
+ArrayList<Platform> platform;
+ArrayList<Boundary> boundary;
+ArrayList<Balance> balance;
 Box2DProcessing box2d; 
+
+float t = 330;
 
 void setup()
 {
-  fullScreen();
-  background(0); 
+  fullScreen(); 
+  smooth();
   box2d = new Box2DProcessing(this); 
   box2d.createWorld();
-  boundary = new Boundary(0, 500, 5000, 10);
-  platform = new Platform(100, 250, 400, 20);
-  platform2 = new Platform(500,250,400,20);
-  balance = new Balance(100,480, 20, 400);
-  balance2 = new Balance(500,480,20,400);
+  box2d.setGravity(0,-10);
+  boundary = new ArrayList<Boundary>();
+  boundary.add(new Boundary(width/4,height-5,width/2-50,10));
+  boundary.add(new Boundary(3*width/4,height-5,width/2-50,10));
+  platform = new ArrayList<Platform>();
+  platform.add(new Platform(t, 500, 300, 20));
+  platform.add(new Platform(3*width/4,500,300,20));
+  balance = new ArrayList<Balance>();
+  balance.add(new Balance(width/4, height-5, 20,500));
+  balance.add(new Balance(3*width/4,height-5,20,500));
   
   
 }
 
 void draw()
 {
+  
+  background(255);
   box2d.step();
-  boundary.display();
-  balance.display();
-  balance2.display();
-  platform.display();
-  platform2.display();
+  for(Boundary wall: boundary)
+  {
+    wall.display();
+  }
+  for(Balance pole: balance)
+  {
+    pole.display();
+  }
+  for(Platform land: platform)
+  {
+    land.display();
+  }
+}
+
+void keyPressed()
+{
+  if(key == 'w');
+  {
+    t+=1;
+  }
 }

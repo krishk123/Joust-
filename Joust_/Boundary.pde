@@ -1,11 +1,11 @@
 class Boundary
 {
   Body body;
-  int x;
-  int y;
-  int w;
-  int h;
-  Boundary(int x_, int y_, int w_, int h_)
+  float x;
+  float y;
+  float w;
+  float h;
+  Boundary(float x_, float y_, float w_, float h_)
   {
     x = x_;
     y = y_;

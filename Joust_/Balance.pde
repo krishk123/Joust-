@@ -14,10 +14,10 @@ class Balance
     
     
     body = box2d.createBody(bd);
-    
+    PolygonShape ps = new PolygonShape(); 
     float box2dW = box2d.scalarPixelsToWorld(w/2);
     float box2dH = box2d.scalarPixelsToWorld(h/2);
-    PolygonShape ps = new PolygonShape(); 
+    
     
     ps.setAsBox(box2dW, box2dH); 
     
@@ -26,11 +26,9 @@ class Balance
   
   void display()
   {
-    pushMatrix();
-    fill(255);
+    fill(0);
     stroke(0);
     rectMode(CENTER);
     rect(x,y,w,h);
-    popMatrix();
   }
 }
