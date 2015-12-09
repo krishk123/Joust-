@@ -1,18 +1,18 @@
-class Platform
+class Platform2
 { 
   Body body; 
   float x;
   float y;
   float w;
   float h; 
-  public int pNum; 
   
-  Platform(float x_, float y_, float w_, float h_ )
+  Platform2(float x_, float y_, float w_, float h_)
   {
     x = x_;
     y = y_;
     w = w_;
     h = h_; 
+
     
     PolygonShape sd = new PolygonShape();
     float box2dW = box2d.scalarPixelsToWorld(w_/2);

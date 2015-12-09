@@ -1,18 +1,16 @@
-class Platform
-{ 
+class Player
+{
   Body body; 
-  float x;
-  float y;
-  float w;
-  float h; 
-  public int pNum; 
-  
-  Platform(float x_, float y_, float w_, float h_ )
+  int x;
+  int y;
+  int w;
+  int h;
+  Player(int x_, int y_, int w_, int h_)
   {
     x = x_;
     y = y_;
     w = w_;
-    h = h_; 
+    h = h_;
     
     PolygonShape sd = new PolygonShape();
     float box2dW = box2d.scalarPixelsToWorld(w_/2);
@@ -41,7 +39,7 @@ class Platform
     pushMatrix();
     translate(pos.x,pos.y);
     rotate(-a);
-    fill(175);
+    fill(255,0,0);
     stroke(255);
     rect(0,0,w,h);
     popMatrix();

@@ -6,6 +6,8 @@ import org.jbox2d.dynamics.*;
 ArrayList<Platform> platform;
 ArrayList<Boundary> boundary;
 ArrayList<Balance> balance;
+ArrayList<Player> player;
+ArrayList<Platform2> platform2; 
 Box2DProcessing box2d; 
 
 float t = 320;
@@ -23,10 +25,18 @@ void setup()
   boundary.add(new Boundary(3*width/4,height-5,width/2-50,10));
   platform = new ArrayList<Platform>();
   platform.add(new Platform(t, 500, 300, 20));
-  platform.add(new Platform(f,500,300,20));
+  platform2 = new ArrayList<Platform2>();
+  platform2.add(new Platform2(f, 500,300,20)); 
   balance = new ArrayList<Balance>();
   balance.add(new Balance(width/4, height-5, 20,500));
   balance.add(new Balance(3*width/4,height-5,20,500));
+  player = new ArrayList<Player>();
+  player.add(new Player(width/4, 300, 20, 50)); 
+  player.add(new Player(3*width/4, 300, 20, 50));
+  textSize(48);
+  text("Joust!", width/2, height +10);
+  
+  
   
   
 }
@@ -48,13 +58,24 @@ void draw()
   {
     land.display();
   }
-
-}
-
-void keyPressed()
-{
-  if(key == 'w');
+  for(Platform2 land2: platform2) 
   {
-    t+=1;
+    land2.display();
   }
+  for(Player character: player)
+  {
+    character.display();
+  }
+
 }
+
+/*void movement()
+{
+  if (pNum == 0 )
+  {
+    if (keyPressed == true)
+    {
+      platform.get(0); 
+    }
+  }
+  */
