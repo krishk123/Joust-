@@ -46,4 +46,18 @@ class Platform
     rect(0,0,w,h);
     popMatrix();
   }
+  void movement()
+  {
+    if (keyPressed == true)
+    {
+      if (key == 'w')
+      {
+        body.setLinearVelocity(new Vec2(1,0));
+      }
+      if (key == 'q')
+      {
+        body.setLinearVelocity(new Vec2(-1,0));
+      }
+    }
+  }
 }

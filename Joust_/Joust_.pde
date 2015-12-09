@@ -34,7 +34,8 @@ void setup()
   player.add(new Player(width/4, 300, 20, 50)); 
   player.add(new Player(3*width/4, 300, 20, 50));
   textSize(48);
-  text("Joust!", width/2, height +10);
+  text("Joust!", width/2, height);
+  
   
   
   
@@ -57,10 +58,12 @@ void draw()
   for(Platform land: platform)
   {
     land.display();
+    land.movement();
   }
   for(Platform2 land2: platform2) 
   {
     land2.display();
+    land2.movement();
   }
   for(Player character: player)
   {
@@ -68,14 +71,3 @@ void draw()
   }
 
 }
-
-/*void movement()
-{
-  if (pNum == 0 )
-  {
-    if (keyPressed == true)
-    {
-      platform.get(0); 
-    }
-  }
-  */

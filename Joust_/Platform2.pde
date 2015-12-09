@@ -19,7 +19,7 @@ class Platform2
     float box2dH = box2d.scalarPixelsToWorld(h_/2);
     sd.setAsBox(box2dW, box2dH);
 
-    FixtureDef fd = new FixtureDef();
+    FixtureDef fd = new FixtureDef(); 
     fd.shape = sd;
     fd.density = 1;
     fd.friction = 0.3;
@@ -45,5 +45,19 @@ class Platform2
     stroke(255);
     rect(0,0,w,h);
     popMatrix();
+  }
+  void movement()
+  {
+    if (keyPressed == true)
+    {
+      if (key == 'g')
+      {
+        body.setLinearVelocity(new Vec2(1,0));
+      }
+      if (key == 'f')
+      {aw
+        body.setLinearVelocity(new Vec2(-1,0));
+      }
+    }
   }
 }
