@@ -55,7 +55,7 @@ class Platform2
         body.setLinearVelocity(new Vec2(1,0));
       }
       if (key == 'f')
-      {aw
+      {
         body.setLinearVelocity(new Vec2(-1,0));
       }
     }

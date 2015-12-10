@@ -54,7 +54,7 @@ class Platform
       {
         body.setLinearVelocity(new Vec2(1,0));
       }
-      if (key == 'q')
+      if (key == 's')
       {
         body.setLinearVelocity(new Vec2(-1,0));
       }
