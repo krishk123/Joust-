@@ -8,8 +8,7 @@ ArrayList<Boundary> boundary;
 ArrayList<Balance> balance;
 ArrayList<Player> player;
 ArrayList<Platform2> platform2; 
-Box2DProcessing box2d; 
-
+Box2DProcessing box2d;
 float t = 320;
 float f = 3*t;
 

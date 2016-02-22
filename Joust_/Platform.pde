@@ -52,11 +52,11 @@ class Platform
     {
       if (key == 'w')
       {
-        body.setLinearVelocity(new Vec2(1,0));
+        body.setLinearVelocity(new Vec2(3,0));
       }
       if (key == 's')
       {
-        body.setLinearVelocity(new Vec2(-1,0));
+        body.setLinearVelocity(new Vec2(-3,0));
       }
     }
   }
