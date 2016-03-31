@@ -18,7 +18,7 @@ void setup()
   photo1 = loadImage("GladiatorArena.png");
   fullScreen(); 
   smooth();
-  background(photo1); 
+  
   box2d = new Box2DProcessing(this); 
   box2d.createWorld();
   box2d.setGravity(0,-10);
@@ -30,10 +30,10 @@ void setup()
   platform2 = new ArrayList<Platform2>();
   platform2.add(new Platform2(f, 500,300,20)); 
   balance = new ArrayList<Balance>();
-  balance.add(new Balance(width/4, height-5, 20,500));
-  balance.add(new Balance(3*width/4,height-5,20,500));
+  balance.add(new Balance(width/4, height-5, 20,460));
+  balance.add(new Balance(3*width/4,height-5,20,3));
   player = new ArrayList<Player>();
-  player.add(new Player(width/4, 300, 20, 50)); 
+  player.add(new Player(width/4, 350, 20, 50)); 
   player.add(new Player(3*width/4, 300, 20, 50));
   textSize(48);
   text("Joust!", width/2, height);
@@ -43,7 +43,7 @@ void setup()
 void draw()
 {
   
-  background(255);
+  background(photo1); 
   box2d.step();
   for(Boundary wall: boundary)
   {

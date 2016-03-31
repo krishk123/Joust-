@@ -37,7 +37,7 @@ class Platform
   {
     Vec2 pos = box2d.getBodyPixelCoord(body);
     float a = body.getAngle();
-    rectMode(CENTER);
+    rectMode(CENTER); 
     pushMatrix();
     translate(pos.x,pos.y);
     rotate(-a);
