@@ -1,12 +1,16 @@
 class Player
-{
-  Body body; 
+{ 
+  Body body;
+  PImage photo; 
   int x;
   int y;
   int w;
   int h;
+  
   Player(int x_, int y_, int w_, int h_)
   {
+    photo = loadImage("Gladiator.png");
+    
     x = x_;
     y = y_;
     w = w_;
@@ -35,13 +39,12 @@ class Player
   {
     Vec2 pos = box2d.getBodyPixelCoord(body);
     float a = body.getAngle();
-    rectMode(CENTER);
     pushMatrix();
     translate(pos.x,pos.y);
     rotate(-a);
     fill(255,0,0);
     stroke(255);
-    rect(0,0,w,h);
+    image(photo, w, h);
     popMatrix();
   }
 }
