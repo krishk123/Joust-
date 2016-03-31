@@ -44,8 +44,6 @@ class Player
     pushMatrix();
     translate(pos.x,pos.y);
     rotate(-a);
-    fill(255,0,0);
-    stroke(255);
     image(photo, w, h);
     popMatrix();
   }

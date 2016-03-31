@@ -30,10 +30,10 @@ void setup()
   platform2 = new ArrayList<Platform2>();
   platform2.add(new Platform2(f, 500,300,20)); 
   balance = new ArrayList<Balance>();
-  balance.add(new Balance(width/4, height-5, 20,460));
-  balance.add(new Balance(3*width/4,height-5,20,3));
+  balance.add(new Balance(width/4, height-5, 20,500));
+  balance.add(new Balance(3*width/4,height-5,20,500));
   player = new ArrayList<Player>();
-  player.add(new Player(width/4, 350, 20, 50)); 
+  player.add(new Player(width/4, 300, 20, 50)); 
   player.add(new Player(3*width/4, 300, 20, 50));
   textSize(48);
   text("Joust!", width/2, height);
