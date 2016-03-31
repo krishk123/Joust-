@@ -11,11 +11,14 @@ ArrayList<Platform2> platform2;
 Box2DProcessing box2d;
 float t = 320;
 float f = 3*t;
+PImage photo1; 
 
 void setup()
 {
+  photo1 = loadImage("GladiatorArena.png");
   fullScreen(); 
   smooth();
+  background(photo1); 
   box2d = new Box2DProcessing(this); 
   box2d.createWorld();
   box2d.setGravity(0,-10);
@@ -34,11 +37,7 @@ void setup()
   player.add(new Player(3*width/4, 300, 20, 50));
   textSize(48);
   text("Joust!", width/2, height);
-  
-  
-  
-  
-  
+  print(width, height);
 }
 
 void draw()
@@ -68,5 +67,4 @@ void draw()
   {
     character.display();
   }
-
 }
